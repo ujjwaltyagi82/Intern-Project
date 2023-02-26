@@ -2,7 +2,7 @@ const CollegeModel = require('../models/collegeModel')
 const InternModel = require('../models/internModel')
 let axios = require("axios");
 
-//****************Validation******************** */
+//****************Validation******************** ******/
 
 const isValid = function (value) {
     if (typeof (value) === 'undefined' || value === null) return false
@@ -28,8 +28,8 @@ const createCollege = async function (req, res) {
 
         if (!isValidRequestBody(requestBody)) {
             return res
-                .status(400)
-                .send({ status: false, message: "please provide college data" })
+            .status(400)
+            .send({ status: false, message: "please provide college data" })
         }
 
         const { name, fullName, logoLink } = requestBody

@@ -4,8 +4,8 @@ const CollegeModel = require('../models/collegeModel')
 //*******************VALIDATIONS*********************/
 
 const isValid = function(value){
-    if(typeof (value) === 'undefined' || value === null) return false
-    if(typeof (value) === 'string' && value.trim().length == 0) return false
+if(typeof (value) === 'undefined' || value === null) return false
+if(typeof (value) === 'string' && value.trim().length == 0) return false
     return true
 }
 
@@ -23,7 +23,7 @@ const createIntern = async function(req,res){
         if(!isValidRequestBody(requestBody)){
             return res
                 .status(400)
-                .send({status: false , message: "please provide input data"});
+                .send({status: false , message: "Please Provide input data"});
         }
 
         const {name, email, mobile , collegeName} = requestBody
